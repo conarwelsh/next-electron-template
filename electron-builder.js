@@ -1,0 +1,14 @@
+module.exports = {
+  appId: "com.next-electron-template",
+  productName: "Next Electron Template",
+  directories: {
+    buildResources: "resources",
+  },
+  files: [
+    "./dist/compiled/**/*",
+    "./src/main/**/*",
+    "./node_modules/**/*",
+    "./package.json",
+  ],
+  publish: null,
+}
