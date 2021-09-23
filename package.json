@@ -15,7 +15,7 @@
     "export": "next export -o dist/compiled",
     "format": "prettier --write .",
     "lint": "next lint",
-    "make": "electron-builder --config electron-builder.js",
+    "make": "electron-builder --config electron-builder.json",
     "postinstall": "electron-builder install-app-deps",
     "release": "yarn clean && yarn build && yarn export && yarn make",
     "start": "electron ."

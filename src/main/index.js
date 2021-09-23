@@ -1,5 +1,5 @@
 const path = require("path")
-const url = require("url")
+const { format } = require("url")
 
 const { BrowserWindow, app, ipcMain } = require("electron")
 const isDev = require("electron-is-dev")
@@ -21,11 +21,12 @@ app.on("ready", async () => {
 
   const url = isDev
     ? "http://localhost:8000"
-    : url.format({
-        pathname: path.join(__dirname, "../../dist/index.html"),
+    : format({
+        pathname: path.join(__dirname, "../../dist/compiled/index.html"),
         protocol: "file:",
         slashes: true,
       })
 
   mainWindow.loadURL(url)
+  mainWindow.webContents.openDevTools()
 })
