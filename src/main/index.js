@@ -28,5 +28,7 @@ app.on("ready", async () => {
       })
 
   mainWindow.loadURL(url)
+
+  // @TODO add check for isDev
   mainWindow.webContents.openDevTools()
 })
